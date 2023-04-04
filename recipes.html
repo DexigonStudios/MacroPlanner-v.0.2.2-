@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MacroPlanner</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <header class="topheader">
+            <nav>
+                <ui>
+                    <li class="logo"><a href="index.html">Logo</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ui>
+            </nav>
+        </header>
+        <header class="recipesheader">
+            <div>
+                <h1 class="RecipePageTitle">
+                    Recipes
+                </h1>
+            </div>
+        </header>
+        <section>
+            <!-- <div class="tempcover">
+                <div class="recipesearchcomingsoonbanner">
+                    Coming Soon
+                </div>
+            </div> -->
+            <div class="recipesearchgrid">
+                <div class="recipesearchimage">
+                </div>
+                <div class= "recipesearchdiv">
+                    <div class = "recipesearchdivtop">
+                        <div class="caloriesinputdiv">
+                            <input class ="calorieinputbox" id="calorieinput" input type="number">
+                            <li class="recipesearchinputtext">Calories</li>
+                        </div>
+                        <!-- <div class="caloriesinputdiv">
+                            <input class ="calorieinputbox" id="calorieinput" input type="number">
+                            <li class="recipesearchinputtext">Allergies</li>
+                        </div> -->
+                        <div id="advancedinputdiv" style="display: none">
+                            <div class="caloriesinputdiv">
+                                <input class ="calorieinputbox" id="proteininput" input type="number">
+                                <li class="recipesearchinputtext">Protein (grams)</li>
+                            </div>
+                            <div class="caloriesinputdiv">
+                                <input class ="calorieinputbox" id="carbsinput" input type="number">
+                                <li class="recipesearchinputtext">Carbs (grams)</li>
+                            </div>
+                            <div class="caloriesinputdiv">
+                                <input class ="calorieinputbox" id="fatinput" input type="number">
+                                <li class="recipesearchinputtext">Fat (grams)</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipesearchdivbottom">
+                        <button class="showhideadvanced" id="showhideadvanced">Show Advanced Options</button>
+                        <button class ="findrecipesearch" id="findrecipesearch" onclick="searchrecipe();" >Find Recipes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="reciperecentlyaddedbanner" >
+                Popular Recipes
+                </div>
+                <div class="reciperecentlyadded">
+                    <div class="reciperecentlyaddedslider">
+                        <div class="reciperecentlyaddedsliderdiv">
+                            <div class="reciperecentlyaddedslide" id="1">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="1i" class="recipesslideimage" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="1t" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="1cal"></span><br>
+                                                <span id="1pro"></span><br>
+                                                <span id="1car"></span><br>
+                                                <span id="1fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="2">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="2i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="2t" class="recipeslidecardtitle"> </p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="2cal"></span><br>
+                                                <span id="2pro"></span><br>
+                                                <span id="2car"></span><br>
+                                                <span id="2fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="3">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="3i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="3t" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="3cal"></span><br>
+                                                <span id="3pro"></span><br>
+                                                <span id="3car"></span><br>
+                                                <span id="3fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="4">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="4i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="4t" class="recipeslidecardtitle"> </p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="4cal"></span><br>
+                                                <span id="4pro"></span><br>
+                                                <span id="4car"></span><br>
+                                                <span id="4fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="5">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="5i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="5t" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="5cal"></span><br>
+                                                <span id="5pro"></span><br>
+                                                <span id="5car"></span><br>
+                                                <span id="5fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="6">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="6i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="6t" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="6cal"></span><br>
+                                                <span id="6pro"></span><br>
+                                                <span id="6car"></span><br>
+                                                <span id="6fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="7">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="7i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="7t" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="7cal"></span><br>
+                                                <span id="7pro"></span><br>
+                                                <span id="7car"></span><br>
+                                                <span id="7fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="8">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="8i" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="8t" class="recipeslidecardtitle"> </p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="8cal"></span><br>
+                                                <span id="8pro"></span><br>
+                                                <span id="8car"></span><br>
+                                                <span id="8fat"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- doubled -->
+                            <div class="reciperecentlyaddedslide" id="1">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="1i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="1t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="1cal2"></span><br>
+                                                <span id="1pro2"></span><br>
+                                                <span id="1car2"></span><br>
+                                                <span id="1fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="2">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="2i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="2t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="2cal2"></span><br>
+                                                <span id="2pro2"></span><br>
+                                                <span id="2car2"></span><br>
+                                                <span id="2fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="3">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="3i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="3t2" class="recipeslidecardtitle"> </p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="3cal2"></span><br>
+                                                <span id="3pro2"></span><br>
+                                                <span id="3car2"></span><br>
+                                                <span id="3fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="4">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="4i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="4t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="4cal2"></span><br>
+                                                <span id="4pro2"></span><br>
+                                                <span id="4car2"></span><br>
+                                                <span id="4fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="5">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="5i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="5t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="5cal2"></span><br>
+                                                <span id="5pro2"></span><br>
+                                                <span id="5car2"></span><br>
+                                                <span id="5fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="6">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="6i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="6t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="6cal2"></span><br>
+                                                <span id="6pro2"></span><br>
+                                                <span id="6car2"></span><br>
+                                                <span id="6fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="7">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="7i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="7t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="7cal2"></span><br>
+                                                <span id="7pro2"></span><br>
+                                                <span id="7car2"></span><br>
+                                                <span id="7fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide" id="8">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img id="8i2" src="images/gray.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p id="8t2" class="recipeslidecardtitle"></p>
+                                            <p class="recipeslidecardinfo">
+                                                <span id="8cal2"></span><br>
+                                                <span id="8pro2"></span><br>
+                                                <span id="8car2"></span><br>
+                                                <span id="8fat2"></span><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <div class="reciperecentlyaddedbanner">
+                Recently Added
+                </div>
+                <div class="reciperecentlyadded">
+                    <div class="reciperecentlyaddedslider">
+                        <div class="reciperecentlyaddedsliderdiv">
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/goulash-recipe-1640024897.jpeg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 1
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                250 Calories <br>
+                                                10g Protein <br>
+                                                5g Carbs <br>
+                                                2g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/pigs-in-a-blanket-recipe-1-1643840836.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 2
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                450 Calories <br>
+                                                24g Protein <br>
+                                                18g Carbs <br>
+                                                6g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/easy-dinner-recipes-pizza-casserole-1676054902.jpeg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 3
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                50 Calories <br>
+                                                1g Protein <br>
+                                                2g Carbs <br>
+                                                0g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/35c1c89e-408c-4449-9abe-f109068f40c0.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 4
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                650 Calories <br>
+                                                35g Protein <br>
+                                                14g Carbs <br>
+                                                7g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/11264896.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 5
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                435 Calories <br>
+                                                7g Protein <br>
+                                                40g Carbs <br>
+                                                9g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/french-food.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 6
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                580 Calories <br>
+                                                17g Protein <br>
+                                                65g Carbs <br>
+                                                14g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/airfryerfrenchtoast-2-368x463.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 7
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                670 Calories <br>
+                                                13g Protein <br>
+                                                63g Carbs <br>
+                                                17g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/Honey-Garlic-Shrimp-026.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 8
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                340 Calories <br>
+                                                7g Protein <br>
+                                                18g Carbs <br>
+                                                12g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- doubled -->
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/goulash-recipe-1640024897.jpeg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 1
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                250 Calories <br>
+                                                10g Protein <br>
+                                                5g Carbs <br>
+                                                2g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/pigs-in-a-blanket-recipe-1-1643840836.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 2
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                450 Calories <br>
+                                                24g Protein <br>
+                                                18g Carbs <br>
+                                                6g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/easy-dinner-recipes-pizza-casserole-1676054902.jpeg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 3
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                50 Calories <br>
+                                                1g Protein <br>
+                                                2g Carbs <br>
+                                                0g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/35c1c89e-408c-4449-9abe-f109068f40c0.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 4
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                650 Calories <br>
+                                                35g Protein <br>
+                                                14g Carbs <br>
+                                                7g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/11264896.jpg" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 5
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                435 Calories <br>
+                                                7g Protein <br>
+                                                40g Carbs <br>
+                                                9g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/french-food.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 6
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                580 Calories <br>
+                                                17g Protein <br>
+                                                65g Carbs <br>
+                                                14g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/airfryerfrenchtoast-2-368x463.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 7
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                670 Calories <br>
+                                                13g Protein <br>
+                                                63g Carbs <br>
+                                                17g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reciperecentlyaddedslide">
+                                <div class="recipeslidecard">
+                                    <div class="recipeslidecardfront">
+                                        <img src="images/placeholderfood/Honey-Garlic-Shrimp-026.webp" alt="apple1">
+                                    </div>
+                                    <div class="recipeslidecardback">
+                                        <div>
+                                            <p class="recipeslidecardtitle">
+                                                Recipe 8
+                                            </p>
+                                            <p class="recipeslidecardinfo">
+                                                340 Calories <br>
+                                                7g Protein <br>
+                                                18g Carbs <br>
+                                                12g Fat <br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="emptybox"></div>
+            <div class="emptybox"></div>
+        </section>
+        <footer>
+            123 Main Street • 555-555-5555 • support@us.com
+        </footer>
+    </body>
+    <script>
+        const showhideadvanced = document.querySelector("#showhideadvanced");
+        const advancedinputdiv = document.querySelector("#advancedinputdiv");
+
+        showhideadvanced.addEventListener("click", function(){
+            if(advancedinputdiv.style.display != "block"){
+                document.getElementById("showhideadvanced").innerHTML = "Hide Advanced Options";
+                advancedinputdiv.style.display = "block";
+            }
+            else{
+                document.getElementById("showhideadvanced").innerHTML = "Show Advanced Options";
+                advancedinputdiv.style.display = "none";
+            }
+        })
+    </script>
+    <script src="./main.js"></script>
+</html>

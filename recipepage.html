@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="topheader">
+        <nav>
+            <ui>
+                <li class="logo"><a href="index.html">Logo</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ui>
+        </nav>
+    </header>
+    <section>
+        <div class="recipepagetop">
+            <div class="recipepageinfo">
+                <p class="recipename" id="recipename"></p>
+                <div class="recipepageinfoinner">
+                    <table class="recipepageinfoinnertable1">
+                        <tr id="recipeservingtitle" style="font-weight: 600;"></tr>
+                        <tr id="recipeserving"></tr>
+                        <tr id="recipetimetitle" style="font-weight: 600;"></tr>
+                        <tr id="recipetime"></tr>
+                    </table>
+                    <div class="recipeinfodividerdiv">
+                        <div class="recipeinfodivider"></div>
+                    </div>
+                    <table class="recipepageinfoinnertable2">
+                        <tr id="recipecalorie"></tr>
+                        <tr id="recipeprotein"></tr>
+                        <tr id="recipecarb"></tr>
+                        <tr id="recipefat"></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="recipepageimage">
+                <img id="imagetest" class="currentrecipeimage"></img>
+            </div>
+        </div>
+        <div class="recipepagemain">
+            <div class="ingredientstepinfo">
+                <div>
+                    <p class="ingredientinfoheader1" id="ingredientmaintitle"></p>
+                    <p class="ingredientstepinfoheader2" id="ingredientstitle0"></p>
+                    <table class="ingredientinfotext" id="ingredients0"></table>
+                    <p class="ingredientstepinfoheader2" id="ingredientstitle1"></p>
+                    <table class="ingredientinfotext" id="ingredients1"></table>
+                    <p class="ingredientstepinfoheader2" id="ingredientstitle2"></p>
+                    <table class="ingredientinfotext" id="ingredients2"></table>
+                    <p class="ingredientstepinfoheader2" id="ingredientstitle3"></p>
+                    <table class="ingredientinfotext" id="ingredients3"></table>
+                    <p class="ingredientstepinfoheader2" id="ingredientstitle4"></p>
+                    <table class="ingredientinfotext" id="ingredients4"></table>
+                    <p class="ingredientstepinfoheader2" id="ingredientstitle5"></p>
+                    <table class="ingredientinfotext" id="ingredients5"></table>
+                </div>
+                <div class="ingredientstepdivider"></div>
+                <div class="stepinfodiv">
+                    <p class="ingredientstepinfoheader1" id="stepmaintitle"></p>
+                    <p class="ingredientstepinfoheader2" id="stepstitle0"></p>
+                    <table class="stepinfotext" id="steps0"></table>
+                    <p class="ingredientstepinfoheader2" id="stepstitle1"></p>
+                    <table class="stepinfotext" id="steps1"></table>
+                    <p class="ingredientstepinfoheader2" id="stepstitle2"></p>
+                    <table class="stepinfotext" id="steps2"></table>
+                    <p class="ingredientstepinfoheader2" id="stepstitle3"></p>
+                    <table class="stepinfotext" id="steps3"></table>
+                    <p class="ingredientstepinfoheader2" id="stepstitle4"></p>
+                    <table class="stepinfotext" id="steps4"></table>
+                    <p class="ingredientstepinfoheader2" id="stepstitle5"></p>
+                    <table class="stepinfotext" id="steps5"></table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        123 Main Street • 555-555-5555 • example@us.com
+    </footer>
+    <script src="./loadrecipe.js"></script>
+</body>
+
+</html>

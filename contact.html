@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header class="topheader">
+        <nav>
+            <ui>
+                <li class="logo"><a href="index.html">Logo</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ui>
+        </nav>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("8ZkReM2jlTHhJ088k");
+            })();
+        </script>
+    </header>
+    <header class="placeholderheader">
+        <div>
+            <h1>
+                Contact
+            </h1>
+        </div>
+    </header>
+    <section>
+        <div class="contactcontainer">
+            <form class="contactform">
+                <h3>Contact</h3>
+                <input type="text" id="contactname" placeholder="Name">
+                <p id="contactnameerror" style="display: none">Please enter a name</p>
+                <input type="email" id="contactemail" placeholder="Email">
+                <p id="contactemailerror" style="display: none">Please enter a valid email</p>
+                <textarea id="contactmessage" rows="4" placeholder="Message" style="resize: vertical; max-height: 400px; min-height: 22px;"></textarea>
+                <button type="submit" id="contactsendbutton">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        123 Main Street • 555-555-5555 • support@us.com
+    </footer>
+    <script src="./contact.js"></script>
+</body>
+
+</html>
